@@ -1,5 +1,7 @@
 from selenium import webdriver
 import unittest
+from selenium.webdriver.common.keys import Keys
+import time
 
 class NewVisitorTest(unittest.TestCase):
 	def setUp(self):
@@ -17,7 +19,7 @@ class NewVisitorTest(unittest.TestCase):
 		self.assertIn('To-Do', header_text)
 		# She is invited to enter a to-do item straight away
 		inputbox = self.browser.find_element_by_id('id_new_item')
-		self.fail('Finish the test!')
+		
 		self.assertEqual(
             inputbox.get_attribute('placeholder'),
             'Enter a to-do item'
@@ -37,7 +39,7 @@ class NewVisitorTest(unittest.TestCase):
 		# There is still a text box inviting her to add another item. She
         # enters "Use peacock feathers to make a fly" (Edith is very
         # methodical)
-		
+		self.fail('Finish the test!')
 
 if __name__ == '__main__': 
 	unittest.main()
